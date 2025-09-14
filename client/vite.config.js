@@ -2,8 +2,12 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
 export default defineConfig({
+  root: 'client',
   plugins: [react()],
-  server: { port: 5173 },
-  preview: { port: 5173 },
-  base: "/Jeeva_Portfolio/"   // ✅ must have slashes
+  base: "/Jeevan_Portfolio/",  // GitHub repository name
+  build: {
+    outDir: 'dist',
+    emptyOutDir: true
+  }
 })
+
